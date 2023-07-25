@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+  <title>svg encode/decoder</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+     <h1>svg encode/decoder</h1>
+     
+    </header>
+    <main>
+        <div class="containers">
+       <div class="container container--plainsvg">
+        <label for="plainsvg" class="txtar">insert svg code</label>
+        <div class="actionButtons"><a download="decoded.svg" id="downloadlink" >download</a><br>
+        <button id="copy-plainsvg" class="cpclip">copy to clipboard</button>
+        </div>
+        <textarea name="plainsvg" id="plainsvg" spellcheck="false" placeholder="drop svg file"></textarea>
+       </div>
+       <div class="container container--encodedsvg">
+        <label for="encodedsvg" class="txtar">take encoded svg</label>
+        <button id="copy-encodedsvg" class="cpclip">copy to clipboard</button>
+        <textarea name="encodedsvg" id="encodedsvg" spellcheck="false"></textarea>
+       </div>
+       <div class="container container--result-css">
+        <label for="result-css" class="txtar">take ready for css</label>
+        <button id="copy-resultcss" class="cpclip">copy to clipbord</button>
+        <textarea name="result-css" id="result-css" spellcheck="false" readonly></textarea>
+       </div>
+        </div>
+        <div class="containers">
+        <div class="options">
+         external quotes: 
+         <label class="options__label">
+           <input type="radio" value="single" name="quotes" class="options__input visuallyhidden">
+           <span class="options__text">'single'</span>
+         </label>
+         <span class="options__middle-word">/</span>
+         <label class="options__label">
+          <input type="radio" value="double" name="quotes" class="options__input visuallyhidden" checked>
+          <span class="options__text">'double'</span>
+        </label>
+        </div>
+        <span class="demo">demo: 
+          <button id="greek-waves" title="greek waves" class="btn-xs">1</button>
+          <button id="use" title="use" class="btn-xs">2</button>
+          <button id="animate" title="animate" class="btn-xs">3</button>
+          <button id="trans" title="trans" class="btn-xs">4</button>
+          <button id="zigzag" title="zigzag" class="btn-xs">5</button>
+          <button id="colorcircles" title="colorcircles" class="btn-xs">6</button>
+        </span>
+        <div class="colorpicker">
+         <label for="bgcolor">select background color:</label>
+         <input type="color" value="#fff" id="bgcolor" />
+        </div>
+        <div class="preview">
+         <label for="preview-img-wrapper" class="txtar">preview</label>
+         <div class="preview-img-wrapper">
+           <img id="preview-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" alt="" />
+         </div>
+        </div>
+        </div>
+    </main>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

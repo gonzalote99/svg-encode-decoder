@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  --txtarea-height: 100%;
+  background-repeat: no-repeat
+}
+
+.preview-img-wrapper {
+  width: 100%;
+min-width: 30em;
+height: var(--txtarea-height);
+margin: 0;
+border: 1px solid #ccc;
+border-radius: 10px;
+}
+
